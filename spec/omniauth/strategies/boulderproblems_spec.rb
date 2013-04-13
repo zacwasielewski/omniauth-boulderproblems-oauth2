@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'omniauth-shopify-oauth2'
+require 'omniauth-boulderproblems-oauth2'
 require 'base64'
 
-describe OmniAuth::Strategies::Shopify do
+describe OmniAuth::Strategies::Boulderproblems do
   before :each do
     @request = double('Request')
     @request.stub(:params) { {} }
@@ -10,19 +10,19 @@ describe OmniAuth::Strategies::Shopify do
 
     @client_id = '123'
     @client_secret = '53cr3tz'
-    @options = {:client_options => {:site => 'https://example.myshopify.com'}}
+    @options = {:client_options => {:site => 'http://boulderproblems.com'}}
   end
 
   subject do
     args = [@client_id, @client_secret, @options].compact
-    OmniAuth::Strategies::Shopify.new(nil, *args).tap do |strategy|
+    OmniAuth::Strategies::Boulderproblems.new(nil, *args).tap do |strategy|
       strategy.stub(:request) { @request }
     end
   end
 
   describe '#client' do
-    it 'has correct shopify site' do
-      subject.client.site.should eq('https://example.myshopify.com')
+    it 'has correct boulderproblems site' do
+      subject.client.site.should eq('http://boulderproblems.com')
     end
 
     it 'has correct authorize url' do
@@ -45,7 +45,7 @@ describe OmniAuth::Strategies::Shopify do
       url_base = 'http://auth.request.com'
       @request.stub(:url) { "#{url_base}/page/path" }
       subject.stub(:script_name) { "" } # to not depend from Rack env
-      subject.callback_url.should eq("#{url_base}/auth/shopify/callback")
+      subject.callback_url.should eq("#{url_base}/auth/boulderproblems/callback")
     end
   end
 

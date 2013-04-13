@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-shopify-oauth2 (1.0.0)
+    omniauth-boulderproblems-oauth2 (1.0.0)
       omniauth-oauth2 (~> 1.0.0)
 
 GEM
@@ -40,6 +40,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  omniauth-shopify-oauth2!
+  omniauth-boulderproblems-oauth2!
   rake
   rspec (~> 2.7.0)

@@ -1,6 +1,6 @@
 require 'bundler/setup'
 require 'sinatra/base'
-require 'omniauth-shopify-oauth2'
+require 'omniauth-boulderproblems-oauth2'
 
 SCOPE = 'read_products,read_orders,read_customers,write_shipping'
 
@@ -9,7 +9,7 @@ class App < Sinatra::Base
     <<-HTML
     <html>
     <head>
-      <title>Shopify Oauth2</title>
+      <title>Boulder Problems Oauth2</title>
     </head>
     <body>
       <h3>Authorized</h3>
@@ -23,7 +23,7 @@ class App < Sinatra::Base
     <<-HTML
     <html>
     <head>
-      <title>Shopify Oauth2</title>
+      <title>Boulder Problems Oauth2</title>
     </head>
     <body>
       <h3>Failed Authorization</h3>
@@ -37,7 +37,7 @@ end
 use Rack::Session::Cookie
 
 use OmniAuth::Builder do
-  provider :shopify, ENV['SHOPIFY_API_KEY'], ENV['SHOPIFY_SHARED_SECRET'],
+  provider :boulderproblems, ENV['BOULDERPROBLEMS_API_KEY'], ENV['BOULDERPROBLEMS_SHARED_SECRET'],
            :scope => SCOPE,
            :setup => lambda { |env| params = Rack::Utils.parse_query(env['QUERY_STRING'])
                                     env['omniauth.strategy'].options[:client_options][:site] = "https://#{params['shop']}" }

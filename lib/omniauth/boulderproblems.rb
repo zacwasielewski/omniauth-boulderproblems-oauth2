@@ -1,2 +1,2 @@
-require 'omniauth/shopify/version'
-require 'omniauth/strategies/shopify'
+require 'omniauth/boulderproblems/version'
+require 'omniauth/strategies/boulderproblems'

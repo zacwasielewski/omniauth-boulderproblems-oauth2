@@ -3,4 +3,4 @@ source :rubygems
 gem 'rack'
 
 gem 'sinatra'
-gem 'omniauth-shopify-oauth2', :path => '../'
+gem 'omniauth-boulderproblems-oauth2', :path => '../'

@@ -2,7 +2,7 @@ require 'omniauth/strategies/oauth2'
 
 module OmniAuth
   module Strategies
-    class Shopify < OmniAuth::Strategies::OAuth2
+    class Boulderproblems < OmniAuth::Strategies::OAuth2
       # Available scopes: content themes products customers orders script_tags shipping
       # read_*  or write_*
       DEFAULT_SCOPE = 'read_products'

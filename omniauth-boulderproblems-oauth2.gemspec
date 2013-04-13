@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'omniauth/shopify/version'
+require 'omniauth/boulderproblems/version'
 
 Gem::Specification.new do |s|
-  s.name     = 'omniauth-shopify-oauth2'
-  s.version  = OmniAuth::Shopify::VERSION
-  s.authors  = ['Denis Odorcic']
-  s.email    = ['denis.odorcic@shopify.com']
-  s.summary  = 'Shopify strategy for OmniAuth'
-  s.homepage = 'https://github.com/Shopify/omniauth-shopify-oauth2'
+  s.name     = 'omniauth-boulderproblems-oauth2'
+  s.version  = OmniAuth::Boulderproblems::VERSION
+  s.authors  = ['Zac Wasielewski']
+  s.email    = ['zac@wasielewski.org']
+  s.summary  = 'Boulder Problems strategy for OmniAuth'
+  s.homepage = 'https://github.com/zacwasielewski/omniauth-boulderproblems-oauth2'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

@@ -1,1 +1,1 @@
-require 'omniauth/shopify'
+require 'omniauth/boulderproblems'
