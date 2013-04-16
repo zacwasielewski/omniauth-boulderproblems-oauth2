@@ -3,13 +3,11 @@ require 'omniauth/strategies/oauth2'
 module OmniAuth
   module Strategies
     class Boulderproblems < OmniAuth::Strategies::OAuth2
-      # Available scopes: content themes products customers orders script_tags shipping
-      # read_*  or write_*
-      DEFAULT_SCOPE = 'read_products'
+      DEFAULT_SCOPE = :public
 
       option :client_options, {
-        :authorize_url => '/admin/oauth/authorize',
-        :token_url => '/admin/oauth/access_token'
+        :authorize_url => '/oauth/authorize',
+        :token_url => '/oauth/token'
       }
 
       option :callback_url
