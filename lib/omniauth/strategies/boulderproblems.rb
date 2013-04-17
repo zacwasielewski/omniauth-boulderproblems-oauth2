@@ -6,6 +6,7 @@ module OmniAuth
       DEFAULT_SCOPE = :public
 
       option :client_options, {
+        :site => 'http://boulderproblems.com',
         :authorize_url => '/oauth/authorize',
         :token_url => '/oauth/token'
       }
